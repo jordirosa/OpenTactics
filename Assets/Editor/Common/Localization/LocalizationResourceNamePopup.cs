@@ -11,7 +11,7 @@ public class LocalizationResourceNamePopup : PopupWindowContent
     private const string LOCALIZATION_OK = "OK";
     private const string LOCALIZATION_CANCEL = "Cancel";
 
-    private LocalizationData LOCALIZATION_DATA;
+    private static LocalizationData LOCALIZATION_DATA;
     #endregion
 
     public const int POPUP_WIDTH = 300;
@@ -25,7 +25,7 @@ public class LocalizationResourceNamePopup : PopupWindowContent
     {
         this.localizationWindow = localizationWindow;
 
-        this.LOCALIZATION_DATA = new LocalizationData(Application.dataPath, LOCALIZATION_RESOURCE_FILE, LocalizationEditorWindow.getLanguage());
+        LOCALIZATION_DATA = new LocalizationData(Application.dataPath, LOCALIZATION_RESOURCE_FILE, LocalizationEditorWindow.getLanguage());
     }
 
     public override Vector2 GetWindowSize()

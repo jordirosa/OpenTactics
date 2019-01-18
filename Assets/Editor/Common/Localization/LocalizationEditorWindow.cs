@@ -23,7 +23,7 @@ public class LocalizationEditorWindow : EditorWindow
     private const string LOCALIZATION_VALUE = "Value";
     private const string LOCALIZATION_NEW = "New";
 
-    private LocalizationData LOCALIZATION_DATA;
+    private static LocalizationData LOCALIZATION_DATA;
     #endregion
 
     public const int WINDOW_WIDTH = 400;
@@ -70,17 +70,16 @@ public class LocalizationEditorWindow : EditorWindow
     {
         LocalizationEditorWindow window = (LocalizationEditorWindow)EditorWindow.GetWindow(typeof(LocalizationEditorWindow), false);
 
-        window.LOCALIZATION_DATA = new LocalizationData(Application.dataPath, LOCALIZATION_RESOURCE_FILE, LocalizationEditorWindow.getLanguage());
-        window.titleContent = new GUIContent(window.LOCALIZATION_DATA.getEntries()[LOCALIZATION_WINDOW_TITLE]);
-        Rect r = new Rect((Screen.currentResolution.width / 2) - (WINDOW_WIDTH / 2), (Screen.currentResolution.height / 2) - (WINDOW_HEIGHT / 2), WINDOW_WIDTH, WINDOW_HEIGHT);
-        window.position = r;
+        LOCALIZATION_DATA = new LocalizationData(Application.dataPath, LOCALIZATION_RESOURCE_FILE, LocalizationEditorWindow.getLanguage());
+        window.titleContent = new GUIContent(LOCALIZATION_DATA.getEntries()[LOCALIZATION_WINDOW_TITLE]);
+        window.position = new Rect((Screen.currentResolution.width / 2) - (WINDOW_WIDTH / 2), (Screen.currentResolution.height / 2) - (WINDOW_HEIGHT / 2), WINDOW_WIDTH, WINDOW_HEIGHT);
 
-        SAVE_BUTTON = new GUIContent(window.LOCALIZATION_DATA.getEntries()[LOCALIZATION_SAVE]);
-        DELETE_BUTTON = new GUIContent(window.LOCALIZATION_DATA.getEntries()[LOCALIZATION_DELETE_RESOURCE]);
+        SAVE_BUTTON = new GUIContent(LOCALIZATION_DATA.getEntries()[LOCALIZATION_SAVE]);
+        DELETE_BUTTON = new GUIContent(LOCALIZATION_DATA.getEntries()[LOCALIZATION_DELETE_RESOURCE]);
 
-        NEW_ENTRY_BUTTON = new GUIContent(window.LOCALIZATION_DATA.getEntries()[LOCALIZATION_NEW_ENTRY]);
-        ADD_LANGUAGE_BUTTON = new GUIContent(window.LOCALIZATION_DATA.getEntries()[LOCALIZATION_ADD_LANGUAGE]);
-        DELETE_LANGUAGE_BUTTON = new GUIContent(window.LOCALIZATION_DATA.getEntries()[LOCALIZATION_DELETE_LANGUAGE]);
+        NEW_ENTRY_BUTTON = new GUIContent(LOCALIZATION_DATA.getEntries()[LOCALIZATION_NEW_ENTRY]);
+        ADD_LANGUAGE_BUTTON = new GUIContent(LOCALIZATION_DATA.getEntries()[LOCALIZATION_ADD_LANGUAGE]);
+        DELETE_LANGUAGE_BUTTON = new GUIContent(LOCALIZATION_DATA.getEntries()[LOCALIZATION_DELETE_LANGUAGE]);
 
         window.resourcesList = window.buildResourcesList();
         window.createResource();

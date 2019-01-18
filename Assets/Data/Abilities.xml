@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Abilities>
+  <Ability>
+    <Name>Ataque</Name>
+    <Category>COMMON</Category>
+    <Description>Ataque básico.</Description>
+    <MentalCost>0</MentalCost>
+    <PhysicalCost>0</PhysicalCost>
+  </Ability>
+  <Ability>
+    <Name>Vendaje</Name>
+    <Category>COMMON</Category>
+    <Description>Realiza un vendaje que alivia el daño de los heridos.</Description>
+    <MentalCost>2</MentalCost>
+    <PhysicalCost>2</PhysicalCost>
+  </Ability>
+  <Ability>
+    <Name>Golpetazo</Name>
+    <Category>COMMON</Category>
+    <Description>Golpea utilizando la fuerza bruta sacrificando precisión para intentar causar el mayor daño posible en el objetivo.</Description>
+    <MentalCost>0</MentalCost>
+    <PhysicalCost>4</PhysicalCost>
+  </Ability>
+  <Ability>
+    <Name>Fogonazo</Name>
+    <Category>COMMON</Category>
+    <Description>Libera un fogonazo contra el enemigo causando quemaduras leves.</Description>
+    <MentalCost>4</MentalCost>
+    <PhysicalCost>0</PhysicalCost>
+  </Ability>
+</Abilities>
