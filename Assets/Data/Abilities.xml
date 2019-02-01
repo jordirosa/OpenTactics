@@ -6,6 +6,17 @@
     <Description>Ataque básico.</Description>
     <MentalCost>0</MentalCost>
     <PhysicalCost>0</PhysicalCost>
+    <Range Type="1">
+      <Horizontal>1</Horizontal>
+      <Vertical>99</Vertical>
+    </Range>
+    <Area Type="0" />
+    <Effects>
+      <Effect Type="0">
+        <Power Type="PHYSICAL">100</Power>
+        <HitRate Type="PHYSICAL" />
+      </Effect>
+    </Effects>
   </Ability>
   <Ability>
     <Name>Vendaje</Name>
@@ -13,6 +24,11 @@
     <Description>Realiza un vendaje que alivia el daño de los heridos.</Description>
     <MentalCost>2</MentalCost>
     <PhysicalCost>2</PhysicalCost>
+    <Range Type="1">
+      <Horizontal>1</Horizontal>
+      <Vertical>99</Vertical>
+    </Range>
+    <Area Type="0" />
   </Ability>
   <Ability>
     <Name>Golpetazo</Name>
@@ -20,6 +36,40 @@
     <Description>Golpea utilizando la fuerza bruta sacrificando precisión para intentar causar el mayor daño posible en el objetivo.</Description>
     <MentalCost>0</MentalCost>
     <PhysicalCost>4</PhysicalCost>
+    <Range Type="1">
+      <Horizontal>1</Horizontal>
+      <Vertical>99</Vertical>
+    </Range>
+    <Area Type="0" />
+    <Levels>
+      <Level Value="1">
+        <BonusList>
+          <Bonus Type="0">
+            <PowerBonus>20</PowerBonus>
+          </Bonus>
+        </BonusList>
+      </Level>
+      <Level Value="2">
+        <BonusList>
+          <Bonus Type="0">
+            <PowerBonus>25</PowerBonus>
+          </Bonus>
+        </BonusList>
+      </Level>
+      <Level Value="3">
+        <BonusList>
+          <Bonus Type="0">
+            <PowerBonus>30</PowerBonus>
+          </Bonus>
+        </BonusList>
+      </Level>
+    </Levels>
+    <Effects>
+      <Effect Type="0">
+        <Power Type="PHYSICAL">120</Power>
+        <HitRate Type="PHYSICAL" />
+      </Effect>
+    </Effects>
   </Ability>
   <Ability>
     <Name>Fogonazo</Name>
@@ -27,5 +77,28 @@
     <Description>Libera un fogonazo contra el enemigo causando quemaduras leves.</Description>
     <MentalCost>4</MentalCost>
     <PhysicalCost>0</PhysicalCost>
+    <Range Type="1">
+      <Horizontal>3</Horizontal>
+      <Vertical>99</Vertical>
+    </Range>
+    <Area Type="1">
+      <Horizontal>1</Horizontal>
+      <Vertical>1</Vertical>
+    </Area>
+    <Effects>
+      <Effect Type="0">
+        <Power Type="MAGICAL">125</Power>
+        <HitRate Type="MAGICAL" />
+      </Effect>
+    </Effects>
+  </Ability>
+  <Ability>
+    <Name>Rabieta</Name>
+    <Category>COMMON</Category>
+    <Description>Ataca con rabia a los enemigos, la precisión disminuye, pero las ganas de hacer daño aumentan!!</Description>
+    <MentalCost>4</MentalCost>
+    <PhysicalCost>0</PhysicalCost>
+    <Range Type="0" />
+    <Area Type="0" />
   </Ability>
 </Abilities>

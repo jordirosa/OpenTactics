@@ -130,8 +130,6 @@ public class LocalizationEditorWindow : EditorWindow
 
         List<sLocalizationDataChanged> localizationDataChanged = new List<sLocalizationDataChanged>();
 
-        localizationDataScrollPosition = EditorGUILayout.BeginScrollView(localizationDataScrollPosition);
-
         EditorGUILayout.BeginVertical();
         EditorGUILayout.BeginHorizontal();
         newResource = EditorGUILayout.Popup(LOCALIZATION_DATA.getEntries()[LOCALIZATION_RESOURCE], selectedResource, buildResourcesPopupArray());
@@ -182,6 +180,7 @@ public class LocalizationEditorWindow : EditorWindow
         EditorGUILayout.LabelField(LOCALIZATION_DATA.getEntries()[LOCALIZATION_VALUE], EditorStyles.boldLabel, GUILayout.Width(LOCALIZATION_DATA_COLUMN_WIDTH_3));
         EditorGUILayout.EndHorizontal();
 
+        localizationDataScrollPosition = EditorGUILayout.BeginScrollView(localizationDataScrollPosition);
         foreach (KeyValuePair<string, string> entry in resourcesList[selectedResource].localizationDataList[selectedLanguage].getEntries())
         {
             string newKey;

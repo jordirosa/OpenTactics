@@ -2,10 +2,10 @@
 
 public class Ability : MonoBehaviour
 {
-    public const string DidPerformNotification = "Ability.DidPerformNotification";
+    public const string didPerformNotification = "Ability.DidPerformNotification";
 
     public void Perform()
     {
-        this.PostNotification(DidPerformNotification);
+        this.PostNotification(didPerformNotification);
     }
 }
